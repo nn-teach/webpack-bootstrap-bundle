@@ -1,0 +1,32 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+$midnight-blue : #2c3e50;
+$black: #000;
+
+body {
+    background-color: lightgrey;
+    padding:20px;
+}
+h1{
+  font-size: 3em;
+  color: $midnight-blue;
+}
+p{
+    color: $black;
+
+}
+
+.example-div {
+    @include make-col-ready();
+  
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+    background-color: lightgreen;
+    border:1px solid darkgreen;
+    padding:30px;
+}
